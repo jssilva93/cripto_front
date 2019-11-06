@@ -24,7 +24,8 @@ class Application extends React.Component {
     return (
       <Dashboard history={history} changeMode={changeMode}>
         <Switch>
-          <Route exact path="/app" component={BlankPage} />
+          <Route exact path="/" component={Afin} />
+          <Route exact path="/app" component={Afin} />
           <Route path="/app/dashboard" component={DashboardPage} />
           <Route path="/app/afin" component={Afin} />
           <Route path="/app/caesar" component={Caesar} />

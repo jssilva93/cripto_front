@@ -23,7 +23,7 @@ class Hill extends React.Component {
     const data = {
       query: planeText,
       alphabet: alphabetText,
-      key: Array.from(cipherKey)
+      keyMatrix: Array.from(cipherKey)
     };
     post(webUrlBase + 'classics/HillCipher', data).then((json) => {
       this.setState({ cipheredText: json.data.reply });
