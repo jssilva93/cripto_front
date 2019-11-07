@@ -72,4 +72,4 @@ export const getExcelFile = async (urlRequest, params) => {
   return response;
 };
 
-export const webUrlBase = 'http://criptographyapi.azurewebsites.net/api/';
+export const webUrlBase = 'https://criptographyapi.azurewebsites.net/api/';
