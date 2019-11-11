@@ -5,24 +5,78 @@ import { withStyles } from '@material-ui/core/styles';
 import brand from 'dan-api/dummy/brand';
 import { RegisterForm } from 'dan-components';
 import styles from 'dan-components/Forms/user-jss';
+import { withRouter } from 'react-router-dom';
+import Notification from 'dan-components/Notification/Notification';
+import platform from 'platform';
+import { post, urlRegister } from 'dan-api/request';
 
 class Register extends React.Component {
   state = {
-    valueForm: []
+    mssg: '',
+    isError: false,
   }
 
-  submitForm(values) {
-    setTimeout(() => {
-      this.setState({ valueForm: values });
-      console.log(`You submitted:\n\n${this.state.valueForm}`); // eslint-disable-line
-      window.location.href = '/app';
-    }, 500); // simulate server latency
+  submitForm = (values) => {
+    localStorage.setItem('user_name', values.name);
+    const dataSend = {
+      user: {
+        name: values.name,
+        email: values.email,
+        password: values.password,
+      },
+      device: {
+        brand: platform.name,
+        model: platform.version,
+        os: platform.os.family || 'Unknown',
+        os_version: platform.os.version || '1.0',
+        app_version: 1.1,
+        lang: 'ES'
+      }
+    };
+    this.postData(dataSend);
   }
+
+  postData = (dataSend) => {
+    post(urlRegister, dataSend)
+      .then(response => {
+        if (response.status === 200) {
+          // eslint-disable-next-line camelcase
+          const { data: { session_token } } = response;
+          localStorage.setItem('session_token', session_token);
+          const { history } = this.props;
+          history.push('/app');
+        }
+      })
+      .catch((err) => {
+        const { response } = err;
+        const { status, data } = response || {};
+        const { mssg, error } = data || {};
+        this.setState({ mssg: status === 500 ? error : mssg, isError: true });
+      });
+  }
+
+  closeNotification = () => {
+    this.setState({ isError: false });
+  }
+
+  showResult = (values) => {
+    const data = {
+      ...values.toJS(),
+    };
+    this.submitForm(data);
+  }
+
+  /* sendData = (data) => {
+    const dataForm = { ...this.state };
+    delete dataForm.tab;
+    // handleSubmit(dataForm);
+  }; */
 
   render() {
     const title = brand.name + ' - Register';
     const description = brand.desc;
     const { classes } = this.props;
+    const { isError, mssg } = this.state;
     return (
       <div className={classes.root}>
         <Helmet>
@@ -35,7 +89,8 @@ class Register extends React.Component {
         </Helmet>
         <div className={classes.container}>
           <div className={classes.userFormWrap}>
-            <RegisterForm onSubmit={(values) => this.submitForm(values)} />
+            <RegisterForm handleChangePhone={this.handleChangePhone} handleChangeCountry={this.handleChangeCountry} onSubmit={(values) => this.showResult(values)} />
+            { isError ? <Notification message={mssg} close={this.closeNotification} /> : '' }
           </div>
         </div>
       </div>
@@ -45,6 +100,7 @@ class Register extends React.Component {
 
 Register.propTypes = {
   classes: PropTypes.object.isRequired,
+  history: PropTypes.object.isRequired
 };
 
-export default withStyles(styles)(Register);
+export default withStyles(styles)(withRouter(Register));

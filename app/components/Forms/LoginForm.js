@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
 import { Field, reduxForm } from 'redux-form/immutable';
-import { Checkbox, TextField } from 'redux-form-material-ui';
+import { TextField } from 'redux-form-material-ui';
 import Button from '@material-ui/core/Button';
 import { connect } from 'react-redux';
 import { NavLink } from 'react-router-dom';
@@ -13,10 +13,6 @@ import VisibilityOff from '@material-ui/icons/VisibilityOff';
 import InputAdornment from '@material-ui/core/InputAdornment';
 import Typography from '@material-ui/core/Typography';
 import FormControl from '@material-ui/core/FormControl';
-import FormControlLabel from '@material-ui/core/FormControlLabel';
-import AllInclusive from '@material-ui/icons/AllInclusive';
-import Brightness5 from '@material-ui/icons/Brightness5';
-import People from '@material-ui/icons/People';
 import ArrowForward from '@material-ui/icons/ArrowForward';
 import Paper from '@material-ui/core/Paper';
 import Icon from '@material-ui/core/Icon';
@@ -24,7 +20,6 @@ import Hidden from '@material-ui/core/Hidden';
 import brand from 'dan-api/dummy/brand';
 import logo from 'dan-images/logo.svg';
 import styles from './user-jss';
-import { ContentDivider } from '../Divider';
 
 // validation functions
 const required = value => (value == null ? 'Required' : undefined);
@@ -74,33 +69,13 @@ class LoginForm extends React.Component {
               </NavLink>
               <Button size="small" className={classes.buttonLink} component={NavLink} to="/register">
                 <Icon className={classes.icon}>arrow_forward</Icon>
-                Create new account
+                Registrarse
               </Button>
             </div>
           </Hidden>
           <Typography variant="h4" className={classes.title} gutterBottom>
-            Sign In
+            Inicia sesión
           </Typography>
-          <Typography variant="caption" className={classes.subtitle} gutterBottom align="center">
-            Lorem ipsum dolor sit amet
-          </Typography>
-          <section className={classes.socmedLogin}>
-            <div className={classes.btnArea}>
-              <Button variant="outlined" size="small" className={classes.redBtn} type="button">
-                <AllInclusive className={classNames(classes.leftIcon, classes.iconSmall)} />
-                Socmed 1
-              </Button>
-              <Button variant="outlined" size="small" className={classes.blueBtn} type="button">
-                <Brightness5 className={classNames(classes.leftIcon, classes.iconSmall)} />
-                Socmed 2
-              </Button>
-              <Button variant="outlined" size="small" className={classes.cyanBtn} type="button">
-                <People className={classNames(classes.leftIcon, classes.iconSmall)} />
-                Socmed 3
-              </Button>
-            </div>
-            <ContentDivider content="Or sign in with email" />
-          </section>
           <section className={classes.formWrap}>
             <form onSubmit={handleSubmit}>
               <div>
@@ -108,8 +83,8 @@ class LoginForm extends React.Component {
                   <Field
                     name="email"
                     component={TextField}
-                    placeholder="Your Email"
-                    label="Your Email"
+                    placeholder="Email"
+                    label="Email"
                     required
                     validate={[required, email]}
                     className={classes.field}
@@ -122,12 +97,12 @@ class LoginForm extends React.Component {
                     name="password"
                     component={TextField}
                     type={showPassword ? 'text' : 'password'}
-                    label="Your Password"
+                    label="Contraseña"
                     InputProps={{
                       endAdornment: (
                         <InputAdornment position="end">
                           <IconButton
-                            aria-label="Toggle password visibility"
+                            aria-label="Ver contraseña"
                             onClick={this.handleClickShowPassword}
                             onMouseDown={this.handleMouseDownPassword}
                           >
@@ -143,12 +118,11 @@ class LoginForm extends React.Component {
                 </FormControl>
               </div>
               <div className={classes.optArea}>
-                <FormControlLabel className={classes.label} control={<Field name="checkbox" component={Checkbox} />} label="Remember" />
-                <Button size="small" component={NavLink} to="/reset-password" className={classes.buttonLink}>Forgot Password</Button>
+                <Button size="small" component={NavLink} to="/reset-password" className={classes.buttonLink}>Olvidé mi contraseña</Button>
               </div>
               <div className={classes.btnArea}>
                 <Button variant="contained" color="primary" size="large" type="submit">
-                  Continue
+                  Continuar
                   <ArrowForward className={classNames(classes.rightIcon, classes.iconSmall)} disabled={submitting || pristine} />
                 </Button>
               </div>

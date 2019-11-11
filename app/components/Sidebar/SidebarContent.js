@@ -79,7 +79,7 @@ class SidebarContent extends React.Component {
               style={{ opacity: 1 - (transform / 100), marginTop: transform * -0.3 }}
             >
               <Avatar
-                alt={dummy.user.name}
+                alt={localStorage.getItem('user_name')}
                 src={dummy.user.avatar}
                 className={classNames(classes.avatar, classes.bigAvatar)}
               />

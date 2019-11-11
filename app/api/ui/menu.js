@@ -1,7 +1,7 @@
 module.exports = [
   {
     key: 'basics',
-    name: 'Basics',
+    name: 'Algoritmos',
     icon: 'ios-paper-outline',
     child: [
       {
@@ -21,12 +21,12 @@ module.exports = [
       },
       {
         key: 'substitution',
-        name: 'Substitution',
+        name: 'Sustitución',
         link: '/app/substitution'
       },
       {
         key: 'permutation',
-        name: 'Permutation',
+        name: 'Permutación',
         link: '/app/permutation'
       },
       {
@@ -35,36 +35,5 @@ module.exports = [
         link: '/app/vigenere'
       }
     ]
-  },
-  {
-    key: 'blocks',
-    name: 'Block',
-    icon: 'ios-paper-outline',
-    child: [
-      {
-        key: 'afin',
-        name: 'Afin'
-      },
-      {
-        key: 'caesar',
-        name: 'Caesar'
-      },
-      {
-        key: 'hill',
-        name: 'Hill'
-      },
-      {
-        key: 'sustitution',
-        name: 'Sustitution'
-      },
-      {
-        key: 'permutation',
-        name: 'Permutation'
-      },
-      {
-        key: 'vigenere',
-        name: 'Vigenere'
-      }
-    ]
-  },
+  }
 ];

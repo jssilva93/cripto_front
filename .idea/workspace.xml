@@ -1,12 +1,34 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6da121ee-1a3d-433d-bdaf-ba958c171512" name="Default Changelist" comment="" />
+    <list default="true" id="6da121ee-1a3d-433d-bdaf-ba958c171512" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/dummy/brand.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/dummy/brand.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/dummy/dummyContents.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/dummy/dummyContents.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/request/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/request/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/ui/menu.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/ui/menu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Forms/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Forms/LoginForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Forms/RegisterForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Forms/RegisterForm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Sidebar/SidebarContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Sidebar/SidebarContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/containers/App/Application.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/App/Application.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/containers/App/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/App/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/containers/Pages/Users/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Users/Login.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/containers/Pages/Users/Register.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Users/Register.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/.cache/@babel/register/.babel.7.4.3.development.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/.cache/@babel/register/.babel.7.4.3.development.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/react-boilerplate-dlls/reactBoilerplateDeps.dll.js" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-boilerplate-dlls/reactBoilerplateDeps.dll.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/node_modules/react-boilerplate-dlls/reactBoilerplateDeps.json" beforeDir="false" afterPath="$PROJECT_DIR$/node_modules/react-boilerplate-dlls/reactBoilerplateDeps.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsFlowSettings">
     <service-enabled>true</service-enabled>
@@ -16,8 +38,9 @@
   </component>
   <component name="ProjectId" id="1SCtzvn4PgE5HVyQsM0tltzW9nV" />
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/app/containers/Pages/Vigenere" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.stylelint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -63,11 +86,23 @@
       <workItem from="1571079672520" duration="7101000" />
       <workItem from="1571180640867" duration="9738000" />
       <workItem from="1573002990291" duration="407000" />
-      <workItem from="1573003607587" duration="16515000" />
+      <workItem from="1573003607587" duration="18539000" />
+      <workItem from="1573428913011" duration="7236000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>

@@ -1,11 +1,10 @@
 import React from 'react';
 import { PropTypes } from 'prop-types';
-import { Switch, Route } from 'react-router-dom';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import Dashboard from '../Templates/Dashboard';
 import {
   Parent,
   DashboardPage,
-  BlankPage,
   Form,
   Table,
   Error,
@@ -21,10 +20,13 @@ import {
 class Application extends React.Component {
   render() {
     const { changeMode, history } = this.props;
+    const isLoggedIn = localStorage.getItem('session_token');
+    if (!isLoggedIn) {
+      return (<Redirect to="/" />);
+    }
     return (
       <Dashboard history={history} changeMode={changeMode}>
         <Switch>
-          <Route exact path="/" component={Afin} />
           <Route exact path="/app" component={Afin} />
           <Route path="/app/dashboard" component={DashboardPage} />
           <Route path="/app/afin" component={Afin} />

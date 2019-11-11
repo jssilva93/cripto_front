@@ -83,15 +83,12 @@ class RegisterForm extends React.Component {
               </NavLink>
               <Button size="small" className={classes.buttonLink} component={NavLink} to="/login">
                 <Icon className={classes.icon}>arrow_forward</Icon>
-                Already have account ?
+                Ya tienes una cuenta? Inicia sesión
               </Button>
             </div>
           </Hidden>
           <Typography variant="h4" className={classes.title} gutterBottom>
-            Register
-          </Typography>
-          <Typography variant="caption" className={classes.subtitle} gutterBottom align="center">
-            Lorem ipsum dolor sit amet
+            Regístrate
           </Typography>
           <Tabs
             value={tab}
@@ -101,8 +98,7 @@ class RegisterForm extends React.Component {
             centered
             className={classes.tab}
           >
-            <Tab label="With Email" />
-            <Tab label="With Social Media" />
+            <Tab label="Ingresa tus datos" />
           </Tabs>
           {tab === 0 && (
             <section className={classes.formWrap}>
@@ -112,8 +108,8 @@ class RegisterForm extends React.Component {
                     <Field
                       name="name"
                       component={TextField}
-                      placeholder="Username"
-                      label="Username"
+                      placeholder="Nombre"
+                      label="Nombre"
                       required
                       className={classes.field}
                     />
@@ -124,8 +120,8 @@ class RegisterForm extends React.Component {
                     <Field
                       name="email"
                       component={TextField}
-                      placeholder="Your Email"
-                      label="Your Email"
+                      placeholder="Email"
+                      label="Email"
                       required
                       validate={[required, email]}
                       className={classes.field}
@@ -138,7 +134,7 @@ class RegisterForm extends React.Component {
                       name="password"
                       component={TextField}
                       type="password"
-                      label="Your Password"
+                      label="Contraseña"
                       required
                       validate={[required, passwordsMatch]}
                       className={classes.field}
@@ -151,20 +147,16 @@ class RegisterForm extends React.Component {
                       name="passwordConfirm"
                       component={TextField}
                       type="password"
-                      label="Re-type Password"
+                      label="Vuelve a escribir tu contraseña"
                       required
                       validate={[required, passwordsMatch]}
                       className={classes.field}
                     />
                   </FormControl>
                 </div>
-                <div>
-                  <FormControlLabel control={<Field name="checkbox" component={Checkbox} className={classes.agree} />} label="Agree with" />
-                  <a href="#" className={classes.link}>Terms &amp; Condition</a>
-                </div>
                 <div className={classes.btnArea}>
                   <Button variant="contained" color="primary" type="submit">
-                    Continue
+                    Continuar
                     <ArrowForward className={classNames(classes.rightIcon, classes.iconSmall)} disabled={submitting || pristine} />
                   </Button>
                 </div>

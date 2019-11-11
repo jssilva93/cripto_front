@@ -1,7 +1,7 @@
 import avatarApi from '../images/avatars';
 const dummyContents = {
   user: {
-    name: 'John Doe',
+    name: localStorage.getItem('user_name'),
     title: 'Administrator',
     avatar: avatarApi[6],
     status: 'online'
