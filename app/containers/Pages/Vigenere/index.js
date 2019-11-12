@@ -130,7 +130,7 @@ class Vigenere extends React.Component {
                 name="planeText"
                 onChange={this.handleEvent}
                 label="Texto plano"
-                multiline={true}
+                multiline
                 rows="4"
                 style={{ width: '100%' }}
                 value={planeText}
@@ -149,7 +149,7 @@ class Vigenere extends React.Component {
                 onChange={this.handleEvent}
                 label="Cifrado"
                 name="cipheredText"
-                multiline={true}
+                multiline
                 rows="4"
                 style={{ width: '100%' }}
                 value={cipheredText}

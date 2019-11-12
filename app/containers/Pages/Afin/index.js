@@ -24,7 +24,7 @@ class Afin extends React.Component {
       query: planeText,
       alphabet: alphabetText,
       key: cipherKey
-    }
+    };
     post(webUrlBase + 'classics/AfinCipher', data).then((json) => {
       this.setState({ cipheredText: json.data.reply });
     }).then((response) => {
@@ -45,7 +45,7 @@ class Afin extends React.Component {
       query: cipheredText,
       alphabet: alphabetText,
       key: cipherKey
-    }
+    };
     post(webUrlBase + 'classics/AfinDescipher', data).then((json) => {
       this.setState({ planeText: json.data.reply });
     }).then((response) => {
@@ -62,7 +62,7 @@ class Afin extends React.Component {
     const { alphabetText } = this.state;
     const data = {
       alphabet: alphabetText,
-    }
+    };
     post(webUrlBase + 'classics/AfinGeneratePassword', data).then((json) => {
       this.setState({ cipherKey: json.data.key });
     }).then((response) => {
@@ -81,7 +81,9 @@ class Afin extends React.Component {
   }
 
   render() {
-    const { planeText, cipheredText, alphabetText, cipherKey } = this.state;
+    const {
+      planeText, cipheredText, alphabetText, cipherKey
+    } = this.state;
     return (
       <div>
         <PapperBlock title="Afin" desc="">
@@ -128,7 +130,7 @@ class Afin extends React.Component {
                 name="planeText"
                 onChange={this.handleEvent}
                 label="Texto plano"
-                multiline={true}
+                multiline
                 rows="4"
                 style={{ width: '100%' }}
                 value={planeText}
@@ -147,7 +149,7 @@ class Afin extends React.Component {
                 onChange={this.handleEvent}
                 label="Cifrado"
                 name="cipheredText"
-                multiline={true}
+                multiline
                 rows="4"
                 style={{ width: '100%' }}
                 value={cipheredText}
