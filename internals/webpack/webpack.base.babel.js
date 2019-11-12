@@ -18,12 +18,12 @@ module.exports = options => ({
   mode: options.mode,
   entry: options.entry,
   output: Object.assign(
-    {
-      // Compile into js/build.js
-      path: path.resolve(process.cwd(), 'build'),
-      publicPath: '/',
-    },
-    options.output,
+      {
+        // Compile into js/build.js
+        path: path.resolve(process.cwd(), 'build'),
+        publicPath: '/',
+      },
+      options.output,
   ), // Merge with env dependent settings
   optimization: options.optimization,
   module: {
@@ -33,15 +33,15 @@ module.exports = options => ({
         You can enable it to maintain and keep clean your code.
         NOTE: By enable eslint running app process at beginning will slower
       */
-      //      {
-      //        enforce: 'pre',
-      //        test: /\.js?$/,
-      //        exclude: [/node_modules/],
-      //        loader: 'eslint-loader',
-      //        options: {
-      //          quiet: true,
-      //        }
-      //      },
+      {
+        enforce: 'pre',
+        test: /\.js?$/,
+        exclude: [/node_modules/],
+        loader: 'eslint-loader',
+        options: {
+          quiet: true,
+        }
+      },
       {
         test: /\.js$/, // Transform all .js files required somewhere with Babel
         exclude: /node_modules/,
@@ -73,29 +73,29 @@ module.exports = options => ({
         use: [{
           loader: 'style-loader'
         },
-        {
-          loader: 'css-loader',
-          options:
           {
-            sourceMap: false,
-            importLoaders: 2,
-            modules: true,
-            localIdentName: '[local]__[hash:base64:5]'
-          }
-        },
-        {
-          loader: 'postcss-loader',
-          options: {
-            sourceMap: false
-          }
-        },
-        {
-          loader: 'sass-loader',
-          options: {
-            outputStyle: 'expanded',
-            sourceMap: false
-          }
-        }],
+            loader: 'css-loader',
+            options:
+                {
+                  sourceMap: false,
+                  importLoaders: 2,
+                  modules: true,
+                  localIdentName: '[local]__[hash:base64:5]'
+                }
+          },
+          {
+            loader: 'postcss-loader',
+            options: {
+              sourceMap: false
+            }
+          },
+          {
+            loader: 'sass-loader',
+            options: {
+              outputStyle: 'expanded',
+              sourceMap: false
+            }
+          }],
       },
       {
         test: /\.md$/,
@@ -172,6 +172,17 @@ module.exports = options => ({
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(process.env.NODE_ENV),
+        ENVIRONMENT: JSON.stringify(process.env.ENVIRONMENT),
+        FIREBASE_API_KEY: JSON.stringify(process.env.FIREBASE_API_KEY),
+        FIREBASE_AUTH_DOMAIN: JSON.stringify(process.env.FIREBASE_AUTH_DOMAIN),
+        FIREBASE_DATABASE_URL: JSON.stringify(process.env.FIREBASE_DATABASE_URL),
+        FIREBASE_STORAGE_BUCKET: JSON.stringify(process.env.FIREBASE_STORAGE_BUCKET),
+        FIREBASE_MESSAGING_SENDER_ID: JSON.stringify(process.env.FIREBASE_MESSAGING_SENDER_ID),
+        MAPS_API_KEY: JSON.stringify(process.env.MAPS_API_KEY),
+        MensajeriaID: JSON.stringify(process.env.MensajeriaID),
+        MensajeriaBicicletasID: JSON.stringify(process.env.MensajeriaBicicletasID),
+        WebUrlBase: JSON.stringify(process.env.WebUrlBase),
+        LongRequestsWebUrlBase: JSON.stringify(process.env.LongRequestsWebUrlBase),
       },
     }),
     new webpack.ContextReplacementPlugin(/^\.\/locale$/, context => {
@@ -180,7 +191,7 @@ module.exports = options => ({
       }
       // context needs to be modified in place
       Object.assign(context, {
-      // include only CJK
+        // include only CJK
         regExp: /^\.\/(ja|ko|zh)/,
         // point to the locale data folder relative to moment's src/lib/locale
         request: '../../locale'
@@ -196,8 +207,10 @@ module.exports = options => ({
       'dan-actions': path.resolve(__dirname, '../../app/actions/'),
       'dan-styles': path.resolve(__dirname, '../../app/styles/components/'),
       'dan-api': path.resolve(__dirname, '../../app/api/'),
+      'dan-utils': path.resolve(__dirname, '../../app/utils/'),
       'dan-images': path.resolve(__dirname, '../../public/images/'),
       'dan-vendor': path.resolve(__dirname, '../../node_modules/'),
+      'dan-hoc': path.resolve(__dirname, '../../app/hoc'),
     }
   },
   devtool: options.devtool,

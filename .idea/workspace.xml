@@ -3,72 +3,9 @@
   <component name="ChangeListManager">
     <list default="true" id="6da121ee-1a3d-433d-bdaf-ba958c171512" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/dummy/guideData.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/dummy/guideData.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/api/images/avatars.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/images/avatars.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Forms/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Forms/LoginForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Forms/RegisterForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Forms/RegisterForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Forms/ResetForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Forms/ResetForm.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Forms/user-jss.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Forms/user-jss.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Header/HeaderMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header/HeaderMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Header/UserMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header/UserMenu.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/ImageLightbox/ImageLightbox.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/ImageLightbox/ImageLightbox.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Sidebar/SidebarContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Sidebar/SidebarContent.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/containers/Pages/Afin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Afin/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/containers/Pages/ComingSoon/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/ComingSoon/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/containers/Templates/Decoration.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Templates/Decoration.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/containers/Templates/appStyles-jss.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Templates/appStyles-jss.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internals/webpack/webpack.base.babel.js" beforeDir="false" afterPath="$PROJECT_DIR$/internals/webpack/webpack.base.babel.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/internals/webpack/webpack.prod.babel.js" beforeDir="false" afterPath="$PROJECT_DIR$/internals/webpack/webpack.prod.babel.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/avatars/pp_boy.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/avatars/pp_boy.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/avatars/pp_boy2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/avatars/pp_boy2.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/avatars/pp_boy3.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/avatars/pp_boy3.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/avatars/pp_boy4.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/avatars/pp_boy4.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/avatars/pp_boy5.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/avatars/pp_boy5.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/avatars/pp_girl.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/avatars/pp_girl.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/avatars/pp_girl2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/avatars/pp_girl2.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/avatars/pp_girl3.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/avatars/pp_girl3.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/avatars/pp_girl4.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/avatars/pp_girl4.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/avatars/pp_girl5.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/avatars/pp_girl5.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/bgFooterDark.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/bgFooterDark.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/bgFooterLight.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/bgFooterLight.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/bubbleDark.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/bubbleDark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/bubbleLight.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/bubbleLight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/line1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/line1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/line2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/line2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/lineSide1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/lineSide1.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/lineSide2.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/lineSide2.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/lineSide3.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/lineSide3.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/lineSide4.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/lineSide4.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/parallaxPetal1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/parallaxPetal1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/parallaxPetal11.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/parallaxPetal11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/parallaxPetal2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/parallaxPetal2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/parallaxPetal21.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/parallaxPetal21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/parallaxPetal3.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/parallaxPetal3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/parallaxPetal31.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/parallaxPetal31.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/parallaxPetal4.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/parallaxPetal4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/parallaxPetal41.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/parallaxPetal41.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/petal1.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/petal1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/petal2.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/petal2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/petal3.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/petal3.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/petal4.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/petal4.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/petal5.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/petal5.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/roundedThumbDark.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/roundedThumbDark.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration/roundedThumbLight.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration/roundedThumbLight.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration_dark.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration_dark.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/decoration_light.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/decoration_light.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/guide/guide1.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/guide/guide1.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/guide/guide2.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/guide/guide2.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/guide/guide3.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/guide/guide3.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/guide/guide4.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/guide/guide4.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/guide/guide5.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/guide/guide5.gif" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/logo.png" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/logo.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/logo.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/petal_bg.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/petal_bg.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/petal_grey_bg.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/petal_grey_bg.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/pp_boy.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/pp_boy.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/pp_girl.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/pp_girl.svg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/print_logo.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/print_logo.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/spinner.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/images_default/spinner.gif" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/spinner.gif" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/spinnermod.gif" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -137,7 +74,7 @@
       <workItem from="1573002990291" duration="407000" />
       <workItem from="1573003607587" duration="18539000" />
       <workItem from="1573428913011" duration="7673000" />
-      <workItem from="1573536250959" duration="3127000" />
+      <workItem from="1573536250959" duration="3866000" />
     </task>
     <servers />
   </component>

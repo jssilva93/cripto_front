@@ -6,6 +6,8 @@ const OfflinePlugin = require('offline-plugin');
 const { HashedModuleIdsPlugin } = require('webpack');
 const TerserPlugin = require('terser-webpack-plugin');
 const CompressionPlugin = require('compression-webpack-plugin');
+const CopyPlugin = require('copy-webpack-plugin');
+
 
 module.exports = require('./webpack.base.babel')({
   mode: 'production',
@@ -23,7 +25,7 @@ module.exports = require('./webpack.base.babel')({
   },
 
   optimization: {
-    minimize: true,
+    minimize: false,
     minimizer: [
       new TerserPlugin({
         terserOptions: {
@@ -43,7 +45,7 @@ module.exports = require('./webpack.base.babel')({
         sourceMap: true,
       }),
     ],
-    nodeEnv: 'production',
+    nodeEnv: 'development',
     sideEffects: true,
     concatenateModules: true,
     splitChunks: {
@@ -71,6 +73,9 @@ module.exports = require('./webpack.base.babel')({
   },
 
   plugins: [
+    new CopyPlugin([
+      { from: 'public', to: '' },
+    ]),
     // Minify and optimize the index.html
     new HtmlWebpackPlugin({
       template: 'app/index.html',
@@ -111,6 +116,9 @@ module.exports = require('./webpack.base.babel')({
 
       // Removes warning for about `additional` section usage
       safeToUseOptionalCaches: true,
+
+      autoUpdate: true,
+      responseStrategy: 'network-first',
     }),
 
     new CompressionPlugin({
@@ -147,19 +155,7 @@ module.exports = require('./webpack.base.babel')({
       hashDigestLength: 20,
     }),
   ],
-  resolve: {
-    modules: ['node_modules', 'app'],
-    extensions: ['.js', '.jsx', '.react.js'],
-    mainFields: ['browser', 'jsnext:main', 'main'],
-    alias: {
-      'dan-components': path.resolve(__dirname, '../../app/components/'),
-      'dan-actions': path.resolve(__dirname, '../../app/actions/'),
-      'dan-styles': path.resolve(__dirname, '../../app/styles/components/'),
-      'dan-api': path.resolve(__dirname, '../../app/api/'),
-      'dan-images': path.resolve(__dirname, '../../public/images/'),
-      'dan-vendor': path.resolve(__dirname, '../../node_modules/'),
-    }
-  },
+
   performance: {
     assetFilter: assetFilename => !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename),
   },
