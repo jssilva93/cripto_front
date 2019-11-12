@@ -6,9 +6,6 @@ import { post, webUrlBase } from 'dan-api/request';
 import {
   Grid, Button, InputAdornment, IconButton, Input
 } from '@material-ui/core';
-import NativeSelect from '@material-ui/core/NativeSelect';
-import FormControl from '@material-ui/core/FormControl';
-import InputLabel from "@material-ui/core/InputLabel";
 class Afin extends React.Component {
   constructor(props) {
     super(props);
@@ -27,7 +24,7 @@ class Afin extends React.Component {
       query: planeText,
       alphabet: alphabetText,
       key: cipherKey
-    };
+    }
     post(webUrlBase + 'classics/AfinCipher', data).then((json) => {
       this.setState({ cipheredText: json.data.reply });
     }).then((response) => {
@@ -48,7 +45,7 @@ class Afin extends React.Component {
       query: cipheredText,
       alphabet: alphabetText,
       key: cipherKey
-    };
+    }
     post(webUrlBase + 'classics/AfinDescipher', data).then((json) => {
       this.setState({ planeText: json.data.reply });
     }).then((response) => {
@@ -65,7 +62,7 @@ class Afin extends React.Component {
     const { alphabetText } = this.state;
     const data = {
       alphabet: alphabetText,
-    };
+    }
     post(webUrlBase + 'classics/AfinGeneratePassword', data).then((json) => {
       this.setState({ cipherKey: json.data.key });
     }).then((response) => {
@@ -84,29 +81,21 @@ class Afin extends React.Component {
   }
 
   render() {
-    const {
-      planeText, cipheredText, alphabetText, cipherKey
-    } = this.state;
+    const { planeText, cipheredText, alphabetText, cipherKey } = this.state;
     return (
       <div>
         <PapperBlock title="Afin" desc="">
           <Grid container spacing={1}>
             <Grid item xs={5}>
-              <FormControl className={classes.formControl}>
-                <InputLabel htmlFor="uncontrolled-native">Name</InputLabel>
-                <NativeSelect
-                  defaultValue={30}
-                  inputProps={{
-                    name: 'name',
-                    id: 'uncontrolled-native',
-                  }}
-                >
-                  <option value="" />
-                  <option value={10}>Ten</option>
-                  <option value={20}>Twenty</option>
-                  <option value={30}>Thirty</option>
-                </NativeSelect>
-              </FormControl>
+              <Input
+                name="alphabetText"
+                label="Alfabeto"
+                type="text"
+                onChange={this.handleEvent}
+                style={{ width: '100%' }}
+                value={alphabetText}
+                placeholder="Alfabeto"
+              />
             </Grid>
           </Grid>
           <Grid container spacing={1}>
@@ -139,7 +128,7 @@ class Afin extends React.Component {
                 name="planeText"
                 onChange={this.handleEvent}
                 label="Texto plano"
-                multiline
+                multiline={true}
                 rows="4"
                 style={{ width: '100%' }}
                 value={planeText}
@@ -158,7 +147,7 @@ class Afin extends React.Component {
                 onChange={this.handleEvent}
                 label="Cifrado"
                 name="cipheredText"
-                multiline
+                multiline={true}
                 rows="4"
                 style={{ width: '100%' }}
                 value={cipheredText}

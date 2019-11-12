@@ -2,9 +2,9 @@ import React from 'react';
 import { PropTypes } from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import classNames from 'classnames';
-import decorationLight from 'dan-images/decoration_light.svg';
-import decorationDark from 'dan-images/decoration_dark.svg';
-import petalLight from 'dan-images/petal_bg.svg';
+import decorationLight from 'dan-images_default/decoration_light.svg';
+import decorationDark from 'dan-images_default/decoration_dark.svg';
+import petalLight from 'dan-images_default/petal_bg.svg';
 import styles from './appStyles-jss';
 
 class Decoration extends React.Component {

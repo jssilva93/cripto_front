@@ -20,7 +20,7 @@ import ListItemText from '@material-ui/core/ListItemText';
 import Ionicon from 'react-ionicons';
 import dummy from 'dan-api/dummy/dummyContents';
 import messageStyles from 'dan-styles/Messages.scss';
-import avatarApi from 'dan-api/images/avatars';
+import avatarApi from 'dan-api/images_default/avatars';
 import link from 'dan-api/ui/link';
 import styles from './header-jss';
 

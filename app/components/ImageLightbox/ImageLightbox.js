@@ -91,7 +91,7 @@ class ReactImageLightbox extends Component {
       // When Lightbox is mounted, if animation is enabled it will open with the reverse of the closing animation
       isClosing: !props.animationDisabled,
 
-      // Component parts should animate (e.g., when images are moving, or image is being zoomed)
+      // Component parts should animate (e.g., when images_default are moving, or image is being zoomed)
       shouldAnimate: false,
 
       //-----------------------------
@@ -154,7 +154,7 @@ class ReactImageLightbox extends Component {
     // Used to disable animation when changing props.mainSrc|nextSrc|prevSrc
     this.keyPressed = false;
 
-    // Used to store load state / dimensions of images
+    // Used to store load state / dimensions of images_default
     this.imageCache = {};
 
     // Time the last keydown event was called (used in keyboard action rate limiting)
@@ -169,7 +169,7 @@ class ReactImageLightbox extends Component {
     this.scrollX = 0;
     this.scrollY = 0;
 
-    // Used in panning zoomed images
+    // Used in panning zoomed images_default
     this.moveStartX = 0;
     this.moveStartY = 0;
     this.moveStartOffsetX = 0;
@@ -185,7 +185,7 @@ class ReactImageLightbox extends Component {
     this.pinchTouchList = null;
     this.pinchDistance = 0;
 
-    // Used to differentiate between images with identical src
+    // Used to differentiate between images_default with identical src
     this.keyCounter = 0;
 
     // Used to detect a move when all src's remain unchanged (four or more of the same image in a row)
@@ -234,7 +234,7 @@ class ReactImageLightbox extends Component {
     });
 
     if (sourcesChanged || this.moveRequested) {
-      // Reset the loaded state for images not rendered next
+      // Reset the loaded state for images_default not rendered next
       Object.keys(prevSrcDict).forEach(prevSrc => {
         if (!(prevSrc in nextSrcDict) && prevSrc in this.imageCache) {
           this.imageCache[prevSrc].loaded = false;
@@ -243,7 +243,7 @@ class ReactImageLightbox extends Component {
 
       this.moveRequested = false;
 
-      // Load any new images
+      // Load any new images_default
       this.loadAllImages(nextProps);
     }
   }
@@ -553,7 +553,7 @@ class ReactImageLightbox extends Component {
       return;
     }
 
-    // Allow slightly faster navigation through the images when user presses keys repeatedly
+    // Allow slightly faster navigation through the images_default when user presses keys repeatedly
     if (event.type === 'keyup') {
       this.lastKeyDownTime -= this.props.keyRepeatKeyupBonus;
       return;
@@ -1152,7 +1152,7 @@ class ReactImageLightbox extends Component {
     inMemoryImage.src = imageSrc;
   }
 
-  // Load all images and their thumbnails
+  // Load all images_default and their thumbnails
   loadAllImages(props = this.props) {
     const generateLoadDoneCallback = (srcType, imageSrc) => err => {
       // Give up showing image on error
@@ -1170,7 +1170,7 @@ class ReactImageLightbox extends Component {
       this.forceUpdate();
     };
 
-    // Load the images
+    // Load the images_default
     this.getSrcTypes().forEach(srcType => {
       const type = srcType.name;
 
@@ -1181,7 +1181,7 @@ class ReactImageLightbox extends Component {
         }));
       }
 
-      // Load unloaded images
+      // Load unloaded images_default
       if (props[type] && !this.isImageLoaded(props[type])) {
         this.loadImage(
           type,
@@ -1293,7 +1293,7 @@ class ReactImageLightbox extends Component {
       };
     }
 
-    // Key endings to differentiate between images with the same src
+    // Key endings to differentiate between images_default with the same src
     const keyEndings = {};
     this.getSrcTypes().forEach(({ name, keyEnding }) => {
       keyEndings[name] = keyEnding;
@@ -1698,11 +1698,11 @@ ReactImageLightbox.propTypes = {
   //-----------------------------
 
   // Required interval of time (ms) between key actions
-  // (prevents excessively fast navigation of images)
+  // (prevents excessively fast navigation of images_default)
   keyRepeatLimit: PropTypes.number,
 
   // Amount of time (ms) restored after each keyup
-  // (makes rapid key presses slightly faster than holding down the key to navigate images)
+  // (makes rapid key presses slightly faster than holding down the key to navigate images_default)
   keyRepeatKeyupBonus: PropTypes.number,
 
   //-----------------------------

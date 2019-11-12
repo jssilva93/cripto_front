@@ -3,9 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="6da121ee-1a3d-433d-bdaf-ba958c171512" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/BreadCrumb/BreadCrumb.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/BreadCrumb/BreadCrumb.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/containers/Pages/Afin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Afin/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/images/logo.svg" beforeDir="false" afterPath="$PROJECT_DIR$/public/images/logo.svg" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -74,7 +71,7 @@
       <workItem from="1573002990291" duration="407000" />
       <workItem from="1573003607587" duration="18539000" />
       <workItem from="1573428913011" duration="7673000" />
-      <workItem from="1573536250959" duration="1576000" />
+      <workItem from="1573536250959" duration="2795000" />
     </task>
     <servers />
   </component>
