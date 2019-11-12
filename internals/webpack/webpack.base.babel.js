@@ -18,12 +18,12 @@ module.exports = options => ({
   mode: options.mode,
   entry: options.entry,
   output: Object.assign(
-      {
-        // Compile into js/build.js
-        path: path.resolve(process.cwd(), 'build'),
-        publicPath: '/',
-      },
-      options.output,
+    {
+      // Compile into js/build.js
+      path: path.resolve(process.cwd(), 'build'),
+      publicPath: '/',
+    },
+    options.output,
   ), // Merge with env dependent settings
   optimization: options.optimization,
   module: {
@@ -73,29 +73,29 @@ module.exports = options => ({
         use: [{
           loader: 'style-loader'
         },
+        {
+          loader: 'css-loader',
+          options:
           {
-            loader: 'css-loader',
-            options:
-                {
-                  sourceMap: false,
-                  importLoaders: 2,
-                  modules: true,
-                  localIdentName: '[local]__[hash:base64:5]'
-                }
-          },
-          {
-            loader: 'postcss-loader',
-            options: {
-              sourceMap: false
-            }
-          },
-          {
-            loader: 'sass-loader',
-            options: {
-              outputStyle: 'expanded',
-              sourceMap: false
-            }
-          }],
+            sourceMap: false,
+            importLoaders: 2,
+            modules: true,
+            localIdentName: '[local]__[hash:base64:5]'
+          }
+        },
+        {
+          loader: 'postcss-loader',
+          options: {
+            sourceMap: false
+          }
+        },
+        {
+          loader: 'sass-loader',
+          options: {
+            outputStyle: 'expanded',
+            sourceMap: false
+          }
+        }],
       },
       {
         test: /\.md$/,
@@ -191,7 +191,7 @@ module.exports = options => ({
       }
       // context needs to be modified in place
       Object.assign(context, {
-        // include only CJK
+      // include only CJK
         regExp: /^\.\/(ja|ko|zh)/,
         // point to the locale data folder relative to moment's src/lib/locale
         request: '../../locale'
