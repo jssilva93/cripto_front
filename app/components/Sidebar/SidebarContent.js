@@ -9,6 +9,7 @@ import MenuItem from '@material-ui/core/MenuItem';
 import Avatar from '@material-ui/core/Avatar';
 import brand from 'dan-api/dummy/brand';
 import dummy from 'dan-api/dummy/dummyContents';
+import ppboy from 'dan-images/pp_boy.svg';
 import logo from 'dan-images/logo.svg';
 import MainMenu from './MainMenu';
 import styles from './sidebar-jss';
@@ -80,7 +81,7 @@ class SidebarContent extends React.Component {
             >
               <Avatar
                 alt={localStorage.getItem('user_name')}
-                src={dummy.user.avatar}
+                src={ppboy}
                 className={classNames(classes.avatar, classes.bigAvatar)}
               />
               <div>
