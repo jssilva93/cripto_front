@@ -130,11 +130,11 @@ module.exports = require('./webpack.base.babel')({
       ios: true,
       icons: [
         {
-          src: path.resolve('public/images_default/logo.png'),
+          src: path.resolve('public/images/logo.png'),
           sizes: [72, 96, 128, 144, 192, 384, 512],
         },
         {
-          src: path.resolve('public/images_default/logo.png'),
+          src: path.resolve('public/images/logo.png'),
           sizes: [120, 152, 167, 180],
           ios: true,
         },
@@ -147,7 +147,19 @@ module.exports = require('./webpack.base.babel')({
       hashDigestLength: 20,
     }),
   ],
-
+  resolve: {
+    modules: ['node_modules', 'app'],
+    extensions: ['.js', '.jsx', '.react.js'],
+    mainFields: ['browser', 'jsnext:main', 'main'],
+    alias: {
+      'dan-components': path.resolve(__dirname, '../../app/components/'),
+      'dan-actions': path.resolve(__dirname, '../../app/actions/'),
+      'dan-styles': path.resolve(__dirname, '../../app/styles/components/'),
+      'dan-api': path.resolve(__dirname, '../../app/api/'),
+      'dan-images': path.resolve(__dirname, '../../public/images/'),
+      'dan-vendor': path.resolve(__dirname, '../../node_modules/'),
+    }
+  },
   performance: {
     assetFilter: assetFilename => !/(\.map$)|(^(main\.|favicon\.))/.test(assetFilename),
   },
