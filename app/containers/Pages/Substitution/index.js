@@ -4,12 +4,16 @@ import { TextField } from 'redux-form-material-ui';
 import Autorenew from '@material-ui/icons/Autorenew';
 import { post, webUrlBase } from 'dan-api/request';
 import {
-  Grid, Button, InputAdornment, IconButton, Input
+  Grid, Button, InputAdornment, IconButton, Input, Select
 } from '@material-ui/core';
+import MenuItem from '@material-ui/core/MenuItem';
 class Substitution extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      alphabetText: 0
+    };
+    this.handleFilterStatusChange = this.handleFilterStatusChange.bind(this);
     this.cipher = this.cipher.bind(this);
     this.descipher = this.descipher.bind(this);
     this.generateKey = this.generateKey.bind(this);
@@ -80,6 +84,12 @@ class Substitution extends React.Component {
     this.setState({ [evt.target.name]: value });
   }
 
+  handleFilterStatusChange(event) {
+    this.setState({
+      alphabetText: event.target.value
+    });
+  }
+
   render() {
     const {
       planeText, cipheredText, alphabetText, cipherKey
@@ -89,15 +99,19 @@ class Substitution extends React.Component {
         <PapperBlock title="Substitution" desc="">
           <Grid container spacing={1}>
             <Grid item xs={5}>
-              <Input
-                name="alphabetText"
-                label="Alfabeto"
-                type="text"
-                onChange={this.handleEvent}
-                style={{ width: '100%' }}
+              <Select
                 value={alphabetText}
-                placeholder="Alfabeto"
-              />
+                onChange={this.handleFilterStatusChange}
+                displayEmpty
+                name="age"
+                style={{ width: '100%' }}
+              >
+                <MenuItem value={0}>
+                  <em>Alfabeto por defecto (Inglés)</em>
+                </MenuItem>
+                <MenuItem value={1}>Alfabeto Español</MenuItem>
+                <MenuItem value={2}>Ascii Extendido</MenuItem>
+              </Select>
             </Grid>
           </Grid>
           <Grid container spacing={1}>

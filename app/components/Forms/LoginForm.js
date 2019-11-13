@@ -69,7 +69,7 @@ class LoginForm extends React.Component {
               </NavLink>
               <Button size="small" className={classes.buttonLink} component={NavLink} to="/register">
                 <Icon className={classes.icon}>arrow_forward</Icon>
-                Registrarse
+                Regístrate
               </Button>
             </div>
           </Hidden>
@@ -116,9 +116,6 @@ class LoginForm extends React.Component {
                     className={classes.field}
                   />
                 </FormControl>
-              </div>
-              <div className={classes.optArea}>
-                <Button size="small" component={NavLink} to="/reset-password" className={classes.buttonLink}>Olvidé mi contraseña</Button>
               </div>
               <div className={classes.btnArea}>
                 <Button variant="contained" color="primary" size="large" type="submit">

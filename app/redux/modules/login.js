@@ -3,8 +3,8 @@ import { INIT } from '../../actions/actionConstants';
 
 const initialState = {
   usersLogin: Map({
-    email: 'johndoe@mail.com',
-    password: '12345678',
+    email: '',
+    password: '',
     remember: false
   })
 };

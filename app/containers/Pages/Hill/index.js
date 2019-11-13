@@ -1,15 +1,18 @@
 import React from 'react';
 import { PapperBlock } from 'dan-components';
 import { TextField } from 'redux-form-material-ui';
-import Autorenew from '@material-ui/icons/Autorenew';
 import { post, webUrlBase } from 'dan-api/request';
 import {
-  Grid, Button, InputAdornment, IconButton, Input
+  Grid, Button, Input, Select
 } from '@material-ui/core';
+import MenuItem from '@material-ui/core/MenuItem';
 class Hill extends React.Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      alphabetText: 0
+    };
+    this.handleFilterStatusChange = this.handleFilterStatusChange.bind(this);
     this.cipher = this.cipher.bind(this);
     this.descipher = this.descipher.bind(this);
     this.generateKey = this.generateKey.bind(this);
@@ -19,7 +22,10 @@ class Hill extends React.Component {
   cipher() {
     const { planeText } = this.state;
     const { alphabetText } = this.state;
-    const { cipherKey } = this.state;
+    const {
+      cipherKey0, cipherKey1, cipherKey2, cipherKey3
+    } = this.state;
+    const cipherKey = [[cipherKey0, cipherKey1], [cipherKey2, cipherKey3]];
     const data = {
       query: planeText,
       alphabet: alphabetText,
@@ -64,7 +70,9 @@ class Hill extends React.Component {
       alphabet: alphabetText,
     };
     post(webUrlBase + 'classics/HillGeneratePassword', data).then((json) => {
-      this.setState({ cipherKey: json.data.keyMatrix });
+      this.setState({
+        cipherKey0: json.data.keyMatrix[0][0], cipherKey1: json.data.keyMatrix[0][1], cipherKey2: json.data.keyMatrix[1][0], cipherKey3: json.data.keyMatrix[1][1]
+      });
     }).then((response) => {
       console.log(response);
     }).catch((error) => {
@@ -75,6 +83,12 @@ class Hill extends React.Component {
     return null;
   }
 
+  handleFilterStatusChange(event) {
+    this.setState({
+      alphabetText: event.target.value
+    });
+  }
+
   handleEvent(evt) {
     const { value } = evt.target;
     this.setState({ [evt.target.name]: value });
@@ -82,46 +96,67 @@ class Hill extends React.Component {
 
   render() {
     const {
-      planeText, cipheredText, alphabetText, cipherKey
+      planeText, cipheredText, alphabetText, cipherKey0, cipherKey1, cipherKey2, cipherKey3
     } = this.state;
     return (
       <div>
         <PapperBlock title="Hill" desc="">
           <Grid container spacing={1}>
             <Grid item xs={5}>
-              <Input
-                name="alphabetText"
-                label="Alfabeto"
-                type="text"
-                onChange={this.handleEvent}
-                style={{ width: '100%' }}
+              <Select
                 value={alphabetText}
-                placeholder="Alfabeto"
-              />
+                onChange={this.handleFilterStatusChange}
+                displayEmpty
+                name="age"
+                style={{ width: '100%' }}
+              >
+                <MenuItem value={0}>
+                  <em>Alfabeto por defecto (Inglés)</em>
+                </MenuItem>
+                <MenuItem value={1}>Alfabeto Español</MenuItem>
+                <MenuItem value={2}>Ascii Extendido</MenuItem>
+              </Select>
             </Grid>
           </Grid>
-          <Grid container spacing={1}>
-            <Grid item xs={5}>
-              <Input
-                name="cipherKey"
-                label="Clave"
-                type="text"
-                onChange={this.handleEvent}
-                style={{ width: '100%' }}
-                value={cipherKey}
-                placeholder="Clave"
-                endAdornment={(
-                  <InputAdornment position="end">
-                    <IconButton
-                      aria-label="Refrescar contraseña"
-                      onClick={this.generateKey}
-                      onMouseDown={this.handleEvent}
-                    >
-                      <Autorenew />
-                    </IconButton>
-                  </InputAdornment>
-                )}
-              />
+          <Grid container spacing={1} style={{ marginTop: '10px' }}>
+            <Grid container xs={5}>
+              <Grid item xs={5}>
+                <Input
+                  name="cipherKey0"
+                  type="number"
+                  onChange={this.handleEvent}
+                  value={cipherKey0}
+                  placeholder="Clave[0]"
+                />
+              </Grid>
+              <Grid item xs={5}>
+                <Input
+                  name="cipherKey1"
+                  type="number"
+                  onChange={this.handleEvent}
+                  value={cipherKey1}
+                  placeholder="Clave[1]"
+                />
+              </Grid>
+              <Grid item xs={5}>
+                <Input
+                  name="cipherKey2"
+                  type="number"
+                  onChange={this.handleEvent}
+                  value={cipherKey2}
+                  placeholder="Clave[2]"
+                />
+              </Grid>
+              <Grid item xs={5}>
+                <Input
+                  name="cipherKey3"
+                  label="Clave[3]"
+                  type="number"
+                  onChange={this.handleEvent}
+                  value={cipherKey3}
+                  placeholder="Clave[3]"
+                />
+              </Grid>
             </Grid>
           </Grid>
           <Grid container spacing={2}>
@@ -137,6 +172,9 @@ class Hill extends React.Component {
               />
             </Grid>
             <Grid item xs={2} style={{ padding: '10px' }}>
+              <Button onClick={this.generateKey} style={{ width: '100%' }}>
+                Generar clave
+              </Button>
               <Button onClick={this.cipher} style={{ width: '100%' }}>
                 Cifrar
               </Button>

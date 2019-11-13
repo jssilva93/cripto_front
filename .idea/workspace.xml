@@ -2,9 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6da121ee-1a3d-433d-bdaf-ba958c171512" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/images/spinner.svg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Sidebar/SidebarContent.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Sidebar/SidebarContent.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Header/UserMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header/UserMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/containers/Pages/Afin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Afin/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/containers/Pages/Caesar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Caesar/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/containers/Pages/Hill/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Hill/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/containers/Pages/Permutation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Permutation/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/containers/Pages/Substitution/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Substitution/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/containers/Pages/Vigenere/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Vigenere/index.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -92,5 +97,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="ws" />
+    <option name="LAST_COMMIT_MESSAGE" value="ws" />
   </component>
 </project>
