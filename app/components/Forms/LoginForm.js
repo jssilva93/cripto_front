@@ -44,10 +44,6 @@ class LoginForm extends React.Component {
     event.preventDefault();
   };
 
-  onChange = value => {
-    console.log('Value', value);
-  };
-
   render() {
     const {
       classes,
@@ -56,8 +52,8 @@ class LoginForm extends React.Component {
       submitting,
       deco,
       recaptchaRef,
+      onChangeCaptcha
     } = this.props;
-    console.log(recaptchaRef);
     const { showPassword } = this.state;
     return (
       <Fragment>
@@ -128,7 +124,7 @@ class LoginForm extends React.Component {
                 <ReCAPTCHA
                   ref={recaptchaRef}
                   sitekey="6LdczMIUAAAAAKGJBPNcm5GG01fEINVxkTZ1k_hq"
-                  onChange={this.onChange}
+                  onChange={onChangeCaptcha}
                 />
               </form>
               <div className={classes.btnArea}>
@@ -151,7 +147,8 @@ LoginForm.propTypes = {
   pristine: PropTypes.bool.isRequired,
   submitting: PropTypes.bool.isRequired,
   deco: PropTypes.bool.isRequired,
-  recaptchaRef: PropTypes.bool.isRequired,
+  recaptchaRef: PropTypes.object.isRequired,
+  onChangeCaptcha: PropTypes.func.isRequired
 };
 
 const LoginFormReduxed = reduxForm({

@@ -46,7 +46,16 @@ class Login extends React.Component {
     this.onSubmit(recaptchaValue);
   }
 
+  onChangeCaptcha = value => {
+    console.log('Value', value);
+    this.setState({ captcha: value });
+  };
+
   submitForm(values) {
+    const { captcha } = this.state;
+    if (!captcha) {
+      return;
+    }
     const dataSend = {
       session: values,
       device: {
@@ -84,7 +93,7 @@ class Login extends React.Component {
         </Helmet>
         <div className={classes.container}>
           <div className={classes.userFormWrap}>
-            <LoginForm onSubmit={(values) => this.submitForm(values)} />
+            <LoginForm onSubmit={(values) => this.submitForm(values)} recaptchaRef={recaptchaRef} onChangeCaptcha={this.onChangeCaptcha} />
             { isError ? <Notification message={mssg} close={this.closeNotification} /> : '' }
           </div>
         </div>
