@@ -72,6 +72,6 @@ export const getExcelFile = async (urlRequest, params) => {
   return response;
 };
 
-export const webUrlBase = 'https://criptographyapi.azurewebsites.net/api/';
+export const webUrlBase = 'https://criptographypoli.azurewebsites.net/api/';
 export const urlLogin = 'https://criptopoli.herokuapp.com/api/mobile/sessions';
 export const urlRegister = 'https://criptopoli.herokuapp.com/api/mobile/users';
