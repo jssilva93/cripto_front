@@ -9,6 +9,7 @@ import { Redirect, withRouter } from 'react-router-dom';
 import Notification from 'dan-components/Notification/Notification';
 import platform from 'platform';
 import { post, urlLogin } from 'dan-api/request';
+const recaptchaRef = React.createRef();
 
 class Login extends React.Component {
   state = {
@@ -38,6 +39,11 @@ class Login extends React.Component {
         const { mssg, error } = data || {};
         this.setState({ mssg: status === 500 ? error : mssg, isError: true });
       });
+  }
+
+  onCaptcha = () => {
+    const recaptchaValue = recaptchaRef.current.getValue();
+    this.onSubmit(recaptchaValue);
   }
 
   submitForm(values) {

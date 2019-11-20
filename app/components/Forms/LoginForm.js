@@ -19,6 +19,7 @@ import Icon from '@material-ui/core/Icon';
 import Hidden from '@material-ui/core/Hidden';
 import brand from 'dan-api/dummy/brand';
 import logo from 'dan-images/logo.svg';
+import ReCAPTCHA from 'react-google-recaptcha';
 import styles from './user-jss';
 
 // validation functions
@@ -43,6 +44,10 @@ class LoginForm extends React.Component {
     event.preventDefault();
   };
 
+  onChange = value => {
+    console.log('Value', value);
+  };
+
   render() {
     const {
       classes,
@@ -50,7 +55,9 @@ class LoginForm extends React.Component {
       pristine,
       submitting,
       deco,
+      recaptchaRef,
     } = this.props;
+    console.log(recaptchaRef);
     const { showPassword } = this.state;
     return (
       <Fragment>
@@ -117,6 +124,13 @@ class LoginForm extends React.Component {
                   />
                 </FormControl>
               </div>
+              <form onSubmit={this.onCaptcha}>
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey="6LdczMIUAAAAAKGJBPNcm5GG01fEINVxkTZ1k_hq"
+                  onChange={this.onChange}
+                />
+              </form>
               <div className={classes.btnArea}>
                 <Button variant="contained" color="primary" size="large" type="submit">
                   Continuar
@@ -137,6 +151,7 @@ LoginForm.propTypes = {
   pristine: PropTypes.bool.isRequired,
   submitting: PropTypes.bool.isRequired,
   deco: PropTypes.bool.isRequired,
+  recaptchaRef: PropTypes.bool.isRequired,
 };
 
 const LoginFormReduxed = reduxForm({

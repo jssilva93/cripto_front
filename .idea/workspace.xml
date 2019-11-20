@@ -3,13 +3,15 @@
   <component name="ChangeListManager">
     <list default="true" id="6da121ee-1a3d-433d-bdaf-ba958c171512" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/components/Header/UserMenu.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Header/UserMenu.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/components/Forms/LoginForm.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/components/Forms/LoginForm.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/containers/Pages/Afin/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Afin/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/containers/Pages/Caesar/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Caesar/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/containers/Pages/Hill/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Hill/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/containers/Pages/Permutation/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Permutation/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/containers/Pages/Substitution/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Substitution/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/containers/Pages/Users/Login.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Users/Login.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/containers/Pages/Vigenere/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Vigenere/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,6 +81,9 @@
       <workItem from="1573003607587" duration="18539000" />
       <workItem from="1573428913011" duration="7673000" />
       <workItem from="1573536250959" duration="5189000" />
+      <workItem from="1574198691320" duration="1581000" />
+      <workItem from="1574201539273" duration="1615000" />
+      <workItem from="1574220407434" duration="814000" />
     </task>
     <servers />
   </component>

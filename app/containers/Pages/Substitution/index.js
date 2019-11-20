@@ -4,7 +4,7 @@ import { TextField } from 'redux-form-material-ui';
 import Autorenew from '@material-ui/icons/Autorenew';
 import { post, webUrlBase } from 'dan-api/request';
 import {
-  Grid, Button, InputAdornment, IconButton, Input, Select
+  Grid, Button, InputAdornment, IconButton, Input, Select, Tooltip
 } from '@material-ui/core';
 import MenuItem from '@material-ui/core/MenuItem';
 class Substitution extends React.Component {
@@ -126,13 +126,17 @@ class Substitution extends React.Component {
                 placeholder="Clave"
                 endAdornment={(
                   <InputAdornment position="end">
-                    <IconButton
-                      aria-label="Refrescar contraseña"
-                      onClick={this.generateKey}
-                      onMouseDown={this.handleEvent}
+                    <Tooltip
+                      title="Generar contraseña"
                     >
-                      <Autorenew />
-                    </IconButton>
+                      <IconButton
+                        aria-label="Refrescar contraseña"
+                        onClick={this.generateKey}
+                        onMouseDown={this.handleEvent}
+                      >
+                        <Autorenew />
+                      </IconButton>
+                    </Tooltip>
                   </InputAdornment>
                 )}
               />
