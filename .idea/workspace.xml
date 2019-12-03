@@ -1,7 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="6da121ee-1a3d-433d-bdaf-ba958c171512" name="Default Changelist" comment="" />
+    <list default="true" id="6da121ee-1a3d-433d-bdaf-ba958c171512" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/api/request/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/api/request/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/containers/Pages/Hill/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Hill/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/containers/Pages/Substitution/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Substitution/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/containers/Pages/Vigenere/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/app/containers/Pages/Vigenere/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/images/credentials.csv" beforeDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,6 +87,7 @@
       <workItem from="1574198691320" duration="1581000" />
       <workItem from="1574201539273" duration="1615000" />
       <workItem from="1574220407434" duration="814000" />
+      <workItem from="1575406298329" duration="1763000" />
     </task>
     <servers />
   </component>

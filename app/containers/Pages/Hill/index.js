@@ -46,11 +46,14 @@ class Hill extends React.Component {
   descipher() {
     const { cipheredText } = this.state;
     const { alphabetText } = this.state;
-    const { cipherKey } = this.state;
+    const {
+      cipherKey0, cipherKey1, cipherKey2, cipherKey3
+    } = this.state;
+    const cipherKey = [[cipherKey0, cipherKey1], [cipherKey2, cipherKey3]];
     const data = {
       query: cipheredText,
       alphabet: alphabetText,
-      key: cipherKey
+      keyMatrix: Array.from(cipherKey)
     };
     post(webUrlBase + 'classics/HillDescipher', data).then((json) => {
       this.setState({ planeText: json.data.reply });

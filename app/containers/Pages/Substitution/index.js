@@ -27,7 +27,7 @@ class Substitution extends React.Component {
     const data = {
       query: planeText,
       alphabet: alphabetText,
-      key: Array.from(cipherKey)
+      key: cipherKey
     };
     post(webUrlBase + 'classics/SubstitutionCipher', data).then((json) => {
       this.setState({ cipheredText: json.data.reply });

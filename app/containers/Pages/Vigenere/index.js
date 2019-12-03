@@ -27,7 +27,7 @@ class Vigenere extends React.Component {
     const data = {
       query: planeText,
       alphabet: alphabetText,
-      key: Array.from(cipherKey)
+      key: cipherKey
     };
     post(webUrlBase + 'classics/VigenereCipher', data).then((json) => {
       this.setState({ cipheredText: json.data.reply });

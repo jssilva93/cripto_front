@@ -8,6 +8,10 @@ export const post = async (urlRequest, dataRequest) => {
     data: dataRequest,
     headers: { 'Content-Type': 'application/json' }
   });
+  console.log(response.data);
+  if (!response.data.status) {
+    alert(response.data.message);
+  }
   return response;
 };
 
