@@ -8,7 +8,7 @@ export const post = async (urlRequest, dataRequest) => {
     data: dataRequest,
     headers: { 'Content-Type': 'application/json' }
   });
-  if (response.data.status === false && response.data.message !== '') {
+  if (response.data.success === false) {
     alert(response.data.message);
   }
   return response;
